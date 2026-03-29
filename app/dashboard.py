@@ -112,25 +112,29 @@ div[data-testid="metric-container"] div[data-testid="stMetricValue"] {
 
 /* Insight card */
 .insight-card {
-    background: #f0f9ff;
+    background: #e0f2fe;
     border-left: 4px solid #0ea5e9;
     border-radius: 0 8px 8px 0;
     padding: 12px 16px;
     margin: 8px 0;
     font-size: 13.5px;
     line-height: 1.6;
+    color: #0c1a2e !important;
 }
 .insight-card.warning {
-    background: #fff7ed;
-    border-left-color: #f97316;
+    background: #fef3c7;
+    border-left-color: #d97706;
+    color: #1c1000 !important;
 }
 .insight-card.success {
-    background: #f0fdf4;
-    border-left-color: #22c55e;
+    background: #dcfce7;
+    border-left-color: #16a34a;
+    color: #052e16 !important;
 }
 .insight-card.danger {
-    background: #fef2f2;
-    border-left-color: #ef4444;
+    background: #fee2e2;
+    border-left-color: #dc2626;
+    color: #1a0000 !important;
 }
 
 /* Score pill */
