@@ -1,0 +1,44 @@
+district,trend,tau,p_value,slope,significant
+Ambala,no trend,0.389,0.1753,70.8,False
+Bhiwani,no trend,0.222,0.4655,12.6,False
+Faridabad,increasing,0.556,0.0476,9.0,True
+Fatehabad,no trend,-0.444,0.1179,-251.2,False
+Gurugram,no trend,0.333,0.2515,4.5,False
+Hisar,no trend,0.278,0.3481,69.7,False
+Jhajjar,no trend,0.333,0.2515,15.2,False
+Jind,no trend,0.333,0.2515,116.6,False
+Kaithal,no trend,0.111,0.7545,19.7,False
+Karnal,no trend,-0.111,0.7545,-30.1,False
+Kurukshetra,no trend,0.0,1.0,0.3,False
+Mahendragarh,no trend,0.194,0.5294,0.5,False
+Nuh,no trend,0.536,0.0746,1.1,False
+Palwal,no trend,0.0,1.0,1.0,False
+Panchkula,no trend,0.028,1.0,0.8,False
+Panipat,no trend,0.5,0.0763,71.1,False
+Rewari,no trend,0.278,0.3481,0.7,False
+Rohtak,no trend,0.389,0.1753,60.2,False
+Sirsa,decreasing,-0.611,0.0286,-239.2,True
+Sonipat,no trend,0.389,0.1753,75.8,False
+Yamunanagar,no trend,0.222,0.4655,24.8,False
+Amritsar,no trend,0.444,0.1179,374.8,False
+Barnala,no trend,0.278,0.3481,343.2,False
+Bathinda,no trend,0.333,0.2515,666.8,False
+Faridkot,no trend,0.333,0.2515,328.8,False
+Fatehgarh Sahib,no trend,0.278,0.3481,36.3,False
+Fazilka,no trend,0.333,0.2515,318.3,False
+Ferozepur,no trend,0.333,0.2515,617.1,False
+Gurdaspur,no trend,0.389,0.1753,273.6,False
+Hoshiarpur,no trend,0.389,0.1753,61.0,False
+Jalandhar,no trend,0.278,0.3481,163.4,False
+Kapurthala,no trend,0.389,0.1753,207.4,False
+Ludhiana,no trend,0.111,0.7545,67.0,False
+Mansa,no trend,0.278,0.3481,464.5,False
+Moga,no trend,0.278,0.3481,404.5,False
+Mohali,no trend,0.167,0.6022,17.8,False
+Muktsar,no trend,0.167,0.6022,374.1,False
+Nawanshahr,no trend,0.056,0.917,6.0,False
+Pathankot,no trend,0.278,0.3481,23.7,False
+Patiala,no trend,0.222,0.4655,647.7,False
+Rupnagar,no trend,0.222,0.4655,27.7,False
+Sangrur,no trend,0.278,0.3481,742.7,False
+Tarn Taran,no trend,0.5,0.0763,595.2,False
