@@ -196,12 +196,12 @@ def load_all_data():
     master["decision_zone"] = master.apply(assign_zone, axis=1)
     master["bsi_thresh"]    = bsi_thresh
     master["res_thresh"]    = res_thresh
-    master["bsi_rank"]      = master["BSI"].rank(ascending=False, method="min").astype(int)
-    master["revenue_rank"]  = master["avg_revenue_crore"].rank(ascending=False, method="min").astype(int)
+    master["bsi_rank"]      = master["BSI"].rank(ascending=False, method="min", na_option="bottom").astype("Int64")
+    master["revenue_rank"]  = master["avg_revenue_crore"].rank(ascending=False, method="min", na_option="bottom").astype("Int64")
 
     # Percentile columns for gauge charts
     for col in ["BSI", "BRS", "BPS", "avg_revenue_crore", "fire_count", "residue"]:
-        master[f"{col}_pct"] = master[col].rank(pct=True) * 100
+        master[f"{col}_pct"] = master[col].rank(pct=True, na_option="bottom") * 100
 
     return master, fire, trends
 
@@ -289,9 +289,11 @@ z_color, z_grad, z_label = zone_cfg.get(row["decision_zone"], ("#666", "#666", r
 col_h1, col_h2 = st.columns([3, 1])
 with col_h1:
     state_tag = "Punjab" if row.get("rainfall", 500) < 700 else "Haryana"  # rough heuristic
+    bsi_rank_str = f"#{int(row['bsi_rank'])}" if pd.notna(row['bsi_rank']) else "N/A"
+    rev_rank_str = f"#{int(row['revenue_rank'])}" if pd.notna(row['revenue_rank']) else "N/A"
     st.markdown(f"""
     <div class='hero-title'>{district}</div>
-    <div class='hero-sub'>Punjab & Haryana Crop Residue & Bioenergy Analysis &nbsp;|&nbsp; BSI Rank <b>#{int(row['bsi_rank'])}</b> of {len(master)} districts &nbsp;|&nbsp; Revenue Rank <b>#{int(row['revenue_rank'])}</b></div>
+    <div class='hero-sub'>Punjab & Haryana Crop Residue & Bioenergy Analysis &nbsp;|&nbsp; BSI Rank <b>{bsi_rank_str}</b> of {len(master)} districts &nbsp;|&nbsp; Revenue Rank <b>{rev_rank_str}</b></div>
     """, unsafe_allow_html=True)
     st.markdown(f"<div class='zone-banner' style='background:{z_grad}'>{z_label}</div>", unsafe_allow_html=True)
 with col_h2:
@@ -320,7 +322,7 @@ c1, c2, c3, c4, c5, c6 = st.columns(6)
 
 delta2 = None
 c1.metric("🔥 BSI Score",      fmt(row['BSI'], "{:.1f}/100"),
-          delta=f"#{int(row['bsi_rank'])} ranked" if pd.notna(row['bsi_rank']) else None,
+          delta=f"#{int(row['bsi_rank'])} ranked" if pd.notna(row.get('bsi_rank')) else None,
           help="PCA-derived Burning Severity Index (NB14). Weights: rainfall 28.3%, temp 27.0%, fire count 22.9%, residue 21.8%.")
 c2.metric("⚠️ BRS Score",      fmt(row['BRS'], "{:.1f}/100"),
           delta=str(row.get("risk_class", "")),
