@@ -1023,10 +1023,12 @@ with tab6:
     # Dual pie charts
     col_z1, col_z2 = st.columns(2)
     with col_z1:
+        zc_df = master["decision_zone"].value_counts().reset_index()
+        zc_df.columns = ["Zone", "Count"]
         fig_pie = px.pie(
-            zone_counts.reset_index().rename(columns={"index": "Zone", "decision_zone": "Districts"}),
-            names="decision_zone", values="count",
-            color="decision_zone",
+            zc_df,
+            names="Zone", values="Count",
+            color="Zone",
             color_discrete_map=zone_color_map,
             title="Decision Zone Distribution (BSI × Residue)",
             hole=0.45,
@@ -1036,16 +1038,17 @@ with tab6:
         st.plotly_chart(fig_pie, use_container_width=True)
 
     with col_z2:
-        env_counts = master["zone"].value_counts()
         env_color_map = {
             "High Stress / High Opportunity": "#dc2626",
             "Moderate Zone": "#f59e0b",
             "Low Priority Zone": "#16a34a",
         }
+        ec_df = master["zone"].value_counts().reset_index()
+        ec_df.columns = ["Zone", "Count"]
         fig_pie2 = px.pie(
-            env_counts.reset_index().rename(columns={"index": "Zone", "zone": "Districts"}),
-            names="zone", values="count",
-            color="zone",
+            ec_df,
+            names="Zone", values="Count",
+            color="Zone",
             color_discrete_map=env_color_map,
             title="K-Means Environmental Zone Distribution",
             hole=0.45,
