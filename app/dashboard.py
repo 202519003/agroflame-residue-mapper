@@ -100,13 +100,14 @@ div[data-testid="metric-container"] div[data-testid="stMetricValue"] {
 .hero-title {
     font-size: 2.2rem;
     font-weight: 700;
-    color: #0f1923;
+    color: #f8fafc;
     line-height: 1.1;
     margin-bottom: 4px;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.3);
 }
 .hero-sub {
     font-size: 14px;
-    color: #64748b;
+    color: #94a3b8;
     margin-bottom: 12px;
 }
 
