@@ -1,7 +1,7 @@
 # Crop Residue Burning & Bioenergy Dashboard
 # Streamlit Cloud requirements — no geopandas (maps are pre-generated PNGs)
-
 streamlit>=1.35.0
 pandas>=2.0.0
 numpy>=1.26.0
 plotly>=5.20.0
+matplotlib>=3.8.0
