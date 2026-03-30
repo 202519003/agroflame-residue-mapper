@@ -12,11 +12,9 @@ from plotly.subplots import make_subplots
 import os
 
 # ── Path resolution ────────────────────────────────────────────────────────
-ROOT   = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DATA   = os.path.join(ROOT, "data",    "processed")
-MAPS   = os.path.join(ROOT, "outputs", "maps")
-TABLES = os.path.join(ROOT, "outputs", "tables")
-PLOTS  = os.path.join(ROOT, "outputs", "plots")
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DATA = os.path.join(ROOT, "data", "processed")
+MAPS = os.path.join(ROOT, "outputs", "maps")
 
 st.set_page_config(
     page_title="Crop Residue & Bioenergy Dashboard",
@@ -132,19 +130,7 @@ def load_all_data():
     return master, fire, trends
 
 
-@st.cache_data
-def load_loocv_data():
-    """Load NB17 LOOCV cluster stability results."""
-    path = os.path.join(TABLES, "17_loocv_stability.csv")
-    if not os.path.exists(path):
-        return None
-    loocv = pd.read_csv(path)
-    loocv["district"] = loocv["district"].str.strip().str.title()
-    return loocv
-
-
 master, fire_stats, trends = load_all_data()
-loocv_df = load_loocv_data()
 
 # ── Sidebar ────────────────────────────────────────────────────────────────
 with st.sidebar:
@@ -213,12 +199,11 @@ st.markdown("<div style='height:1px; background:linear-gradient(90deg,#0ea5e9,#8
 # ══════════════════════════════════════════════════════════════════════════
 # TABS
 # ══════════════════════════════════════════════════════════════════════════
-tab1, tab2, tab3, tab4, tab5 = st.tabs([
+tab1, tab2, tab3, tab4 = st.tabs([
     "📊 District Overview",
     "📈 Fire Trend",
     "🌿 Bioenergy",
     "🗺️ All Districts",
-    "🔬 Cluster Stability",
 ])
 
 
@@ -559,213 +544,6 @@ with tab4:
             else:
                 st.info(f"Map not found: `{fname}`")
             st.caption(caption)
-
-
-# ══════════════════════════════════════════════════════════════════════════
-# TAB 5 — Cluster Stability (NB17 LOOCV)
-# ══════════════════════════════════════════════════════════════════════════
-with tab5:
-    st.markdown("""
-    <div style='font-size:15px; font-weight:600; color:#f0f6ff; margin-bottom:4px'>
-        LOOCV Cluster Stability Validation
-    </div>
-    <div style='font-size:12px; color:#7aa8c8; margin-bottom:16px'>
-        Leave-One-Out Cross-Validation (NB17) — K-Means k=3 on 47 districts (fire count, residue, temp, rainfall)
-    </div>
-    """, unsafe_allow_html=True)
-
-    if loocv_df is None:
-        st.warning(
-            "⚠️ `outputs/tables/17_loocv_stability.csv` not found. "
-            "Run **Notebook 17** first to generate the LOOCV results, then redeploy."
-        )
-    else:
-        # ── Summary KPIs ──────────────────────────────────────────────────
-        n_total      = len(loocv_df)
-        n_stable     = int(loocv_df["stable"].sum()) if "stable" in loocv_df.columns else n_total
-        stability_pct = n_stable / n_total * 100 if n_total > 0 else 0
-        sil_avg      = loocv_df["silhouette"].mean() if "silhouette" in loocv_df.columns else None
-
-        cluster_col = "original_cluster" if "original_cluster" in loocv_df.columns else None
-        cluster_sizes = {}
-        cluster_sils  = {}
-        if cluster_col:
-            for k in sorted(loocv_df[cluster_col].unique()):
-                mask = loocv_df[cluster_col] == k
-                cluster_sizes[k] = int(mask.sum())
-                if "silhouette" in loocv_df.columns:
-                    cluster_sils[k] = float(loocv_df.loc[mask, "silhouette"].mean())
-
-        s1, s2, s3, s4 = st.columns(4)
-        s1.metric("✅ Cluster Stability",   f"{stability_pct:.1f}%")
-        s2.metric("🏘️ Districts Validated", f"{n_stable} / {n_total}")
-        s3.metric("📐 Overall Silhouette",  f"{sil_avg:.4f}" if sil_avg is not None else "N/A")
-        s4.metric("🔀 K-Means Clusters",    "3  (k = 3)")
-
-        st.markdown("<div style='height:1px; background:#2a3f52; margin:1rem 0'></div>", unsafe_allow_html=True)
-
-        # ── Cluster-level silhouette breakdown ────────────────────────────
-        if cluster_sizes:
-            st.markdown("<div class='section-hdr'>Silhouette Score by Cluster</div>", unsafe_allow_html=True)
-            cluster_labels = {0: "Cluster 0 — Low-fire hillside", 1: "Cluster 1 — Urban/peri-urban", 2: "Cluster 2 — High-fire crop belt"}
-            clust_cols = st.columns(len(cluster_sizes))
-            for idx, k in enumerate(sorted(cluster_sizes)):
-                lbl   = cluster_labels.get(k, f"Cluster {k}")
-                n_k   = cluster_sizes[k]
-                sil_k = cluster_sils.get(k)
-                sil_str = f"{sil_k:.4f}" if sil_k is not None else "N/A"
-                clust_cols[idx].metric(lbl, sil_str, delta=f"n = {n_k} districts")
-
-        st.markdown("<div style='height:1px; background:#2a3f52; margin:0.5rem 0 1rem'></div>", unsafe_allow_html=True)
-
-        col_l, col_r = st.columns([3, 2])
-
-        # ── Interactive silhouette bar chart ──────────────────────────────
-        with col_l:
-            st.markdown("<div class='section-hdr'>Per-District Silhouette Scores</div>", unsafe_allow_html=True)
-
-            if "silhouette" in loocv_df.columns:
-                sil_df = loocv_df.sort_values("silhouette", ascending=True).copy()
-
-                # Colour by cluster
-                cluster_palette = {0: "#38bdf8", 1: "#a78bfa", 2: "#fb923c"}
-                bar_colors = [
-                    cluster_palette.get(int(c), "#94a3b8")
-                    for c in sil_df[cluster_col]
-                ] if cluster_col else ["#3b82f6"] * len(sil_df)
-
-                # Highlight selected district
-                highlight = [
-                    "#fbbf24" if d == district else c
-                    for d, c in zip(sil_df["district"], bar_colors)
-                ]
-
-                fig_sil = go.Figure(go.Bar(
-                    x=sil_df["silhouette"],
-                    y=sil_df["district"],
-                    orientation="h",
-                    marker_color=highlight,
-                    hovertemplate=(
-                        "<b>%{y}</b><br>"
-                        "Silhouette: %{x:.4f}<extra></extra>"
-                    ),
-                ))
-
-                # Reference line at 0
-                fig_sil.add_vline(
-                    x=0, line_dash="solid", line_color="#ef4444", line_width=1,
-                    annotation_text="0", annotation_font_size=9,
-                    annotation_font_color="#ef4444",
-                )
-                # Reference line at overall mean
-                if sil_avg is not None:
-                    fig_sil.add_vline(
-                        x=sil_avg, line_dash="dash", line_color="#94a3b8", line_width=1,
-                        annotation_text=f"avg={sil_avg:.3f}",
-                        annotation_font_size=9, annotation_font_color="#94a3b8",
-                        annotation_position="top right",
-                    )
-
-                fig_sil.update_layout(
-                    height=max(500, n_total * 12),
-                    plot_bgcolor="#0f1923", paper_bgcolor="rgba(0,0,0,0)",
-                    xaxis=dict(title="Silhouette Score", color="#7aa8c8", gridcolor="#1e2d3d",
-                               zeroline=False, range=[-0.25, 0.9]),
-                    yaxis=dict(color="#e8f0f7", tickfont=dict(size=10)),
-                    margin=dict(l=10, r=40, t=20, b=40),
-                    showlegend=False,
-                )
-                st.plotly_chart(fig_sil, use_container_width=True)
-                st.caption(
-                    "🟡 = selected district  |  🔵 Cluster 0  |  🟣 Cluster 1  |  🟠 Cluster 2  |  "
-                    "Red line = 0 boundary  |  Grey dash = mean silhouette"
-                )
-            else:
-                st.info("Silhouette scores not found in the LOOCV CSV.")
-
-        # ── Static plots from NB17 ─────────────────────────────────────────
-        with col_r:
-            st.markdown("<div class='section-hdr'>Stability Map</div>", unsafe_allow_html=True)
-            map_path = os.path.join(MAPS, "17_cluster_stability_map.png")
-            if os.path.exists(map_path):
-                st.image(map_path, use_container_width=True)
-                st.caption("Spatial distribution of K-Means clusters with LOOCV stability overlay (NB17).")
-            else:
-                st.info("`outputs/maps/17_cluster_stability_map.png` not found.")
-
-            st.markdown("<div class='section-hdr'>Stability Bar Plot</div>", unsafe_allow_html=True)
-            bar_path = os.path.join(PLOTS, "17_stability_barplot.png")
-            if os.path.exists(bar_path):
-                st.image(bar_path, use_container_width=True)
-                st.caption("Per-district silhouette scores coloured by cluster (NB17).")
-            else:
-                st.info("`outputs/plots/17_stability_barplot.png` not found.")
-
-        st.markdown("<div style='height:1px; background:#2a3f52; margin:1.2rem 0'></div>", unsafe_allow_html=True)
-
-        # ── Selected district LOOCV card ──────────────────────────────────
-        d_loocv = loocv_df[loocv_df["district"] == district]
-        st.markdown("<div class='section-hdr'>Selected District — LOOCV Profile</div>", unsafe_allow_html=True)
-        if not d_loocv.empty:
-            lr = d_loocv.iloc[0]
-            is_stable = bool(lr.get("stable", True))
-            sil_val   = float(lr["silhouette"]) if "silhouette" in lr else None
-            orig_cl   = int(lr["original_cluster"]) if "original_cluster" in lr else "—"
-            loocv_cl  = int(lr["loocv_cluster"])   if "loocv_cluster"   in lr else "—"
-            min_dist  = float(lr["min_dist"])       if "min_dist"        in lr else None
-
-            lc1, lc2, lc3, lc4 = st.columns(4)
-            lc1.metric("Cluster Assignment", str(orig_cl))
-            lc2.metric("LOOCV Cluster",      str(loocv_cl))
-            lc3.metric("Stable?",            "Yes ✅" if is_stable else "No ⚠️")
-            lc4.metric("Silhouette Score",   f"{sil_val:.4f}" if sil_val is not None else "N/A")
-
-            card_cls = "success" if is_stable else "danger"
-            card_msg = (
-                f"✅ <b>{district}</b> is stably assigned to <b>Cluster {orig_cl}</b>. "
-                f"Removing this district from the training set and re-fitting K-Means still places it in Cluster {loocv_cl}. "
-                f"Silhouette = <b>{sil_val:.4f}</b>"
-                + (f", distance to nearest centroid = {min_dist:.3f}." if min_dist is not None else ".")
-                if is_stable else
-                f"⚠️ <b>{district}</b> is a <b>boundary district</b> — it was originally assigned to Cluster {orig_cl} "
-                f"but LOOCV predicted Cluster {loocv_cl}. "
-                f"Its classification should be interpreted with caution. Silhouette = {sil_val:.4f}."
-            )
-            st.markdown(f"<div class='insight-card {card_cls}'>{card_msg}</div>", unsafe_allow_html=True)
-        else:
-            st.info(f"No LOOCV data found for {district}.")
-
-        # ── Full LOOCV results table ───────────────────────────────────────
-        st.markdown("<div class='section-hdr'>Full LOOCV Results Table</div>", unsafe_allow_html=True)
-        show_cols = [c for c in ["district", "state", "original_cluster", "loocv_cluster", "stable", "silhouette", "min_dist"] if c in loocv_df.columns]
-        loocv_disp = loocv_df[show_cols].sort_values("silhouette", ascending=False).reset_index(drop=True)
-        loocv_disp.index += 1
-        fmt_dict = {}
-        if "silhouette" in loocv_disp.columns: fmt_dict["silhouette"] = "{:.4f}"
-        if "min_dist"   in loocv_disp.columns: fmt_dict["min_dist"]   = "{:.4f}"
-
-        st.dataframe(
-            loocv_disp.style
-                .format(fmt_dict)
-                .background_gradient(subset=["silhouette"] if "silhouette" in loocv_disp.columns else [], cmap="RdYlGn"),
-            use_container_width=True, height=400,
-        )
-
-        # ── Methodology note ──────────────────────────────────────────────
-        st.markdown("<div class='section-hdr'>Methodology Note</div>", unsafe_allow_html=True)
-        st.markdown(f"""
-        <div class='insight-card' style='font-size:12px; line-height:1.8'>
-        <b>LOOCV Protocol (NB17):</b> Each of the {n_total} districts was iteratively withheld; K-Means (k=3)
-        was re-fitted on the remaining {n_total-1} districts; and the withheld district was assigned to its
-        nearest cluster centroid. Cluster label permutation across iterations was resolved using the
-        <b>Hungarian algorithm</b> (scipy <code>linear_sum_assignment</code>).<br><br>
-        <b>Result:</b> {n_stable}/{n_total} districts ({stability_pct:.1f}%) were assigned to the same cluster
-        in every LOOCV iteration — indicating the cluster structure is
-        <b>{"perfectly stable" if stability_pct == 100 else "robust"}</b> and not driven by any individual district.
-        Overall silhouette = <b>{sil_avg:.4f}</b>
-        ({'moderate' if sil_avg is not None and sil_avg < 0.5 else 'strong'} internal cohesion).
-        </div>
-        """, unsafe_allow_html=True)
 
 
 # ── Footer ─────────────────────────────────────────────────────────────────
