@@ -1,162 +1,150 @@
-# 🌾 Crop Residue Burning & Bioenergy Dashboard
+# AgroFlame — Crop Residue Burning Risk and Bioenergy Potential Mapper
 
-**Punjab & Haryana | 47 Districts | 2015–2023 VIIRS Fire Data**
+District-level decision-support platform for Punjab and Haryana, India, that identifies where crop residue burning is most urgent and where Compressed Biogas (CBG) plants would be most profitable — turning satellite fire data into a policy-ready investment map.
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://your-app-url.streamlit.app)
+**Live Dashboard:** (https://crop-residue.streamlit.app/)
 
----
+## Overview
 
-## 🚀 Live Dashboard
+Every winter, farmers across North India burn millions of tonnes of crop residue because they lack an economically attractive alternative, driving severe air pollution across the region. AgroFlame reframes this as a market-driven opportunity: it quantifies where burning is most severe, how much recoverable biomass exists, and how profitable a CBG (bioenergy) plant would be at that location, giving policymakers and investors a single, data-backed answer to "where should we intervene first?"
 
-> **[Launch Dashboard →](https://your-app-url.streamlit.app)**  
-> *(Replace this link after deploying on Streamlit Cloud)*
+The project processes **8.7 million satellite fire detections** (NASA FIRMS VIIRS), 13 years of crop production records, and daily climate data into **43 standardized district profiles**, scores each district on three independent indices using statistical and machine learning methods, and serves the results through an interactive public dashboard built with **Streamlit**.
 
----
+## Problem Statement
 
-## 📌 What This Project Does
+Farmers burn crop residue because they lack an economically attractive alternative disposal method. CBG plants offer a market-driven incentive to clear fields sustainably, but where should these plants be built first? AgroFlame answers this with data instead of guesswork.
 
-A complete spatial-ML pipeline to identify **priority districts for Compressed Biogas (CBG) plant investment** by combining satellite fire data, crop production statistics, and environmental variables.
+## Study Area
 
-### Three analytical modules:
+Punjab and Haryana, India — 43 districts spanning both states.
 
-| Module | Notebooks | Output |
-|--------|-----------|--------|
-| **A — Fire Risk** | NB01–07 | Burning Risk Score (BRS 0–100) via fire frequency + FRP + Mann-Kendall trend |
-| **B — Bioenergy** | NB08–10 | Bioenergy Potential Score (BPS 0–100) + ₹ revenue/yr via RPR + CBG yield |
-| **C — Environmental** *(revised)* | NB11–16 | K-Means zones + PCA-derived Burning Severity Index (BSI 0–100) |
+![Punjab and Haryana district boundaries, 43 polygons](assets/study_area_districts.png)
 
-**Module C was revised** from the original socioeconomic approach (NSSO/FPO/PMFBY) to an **environmental feature approach** using fire_count, recoverable residue, avg_temp, and rainfall — making the pipeline entirely satellite + statistical-data-driven.
+## Objectives
 
-### Final decision logic (NB16):
+- Quantify historical and current crop-residue burning intensity at the district level.
+- Convert recoverable residue volume into a projected bioenergy revenue opportunity per district.
+- Cluster districts into environmental severity zones using climate and fire data.
+- Synthesize all three signals into a final, ranked list of recommended bioenergy plant sites.
+- Serve the results through a public, interactive dashboard for non-technical stakeholders.
 
-```
-BSI ≥ 70th percentile  AND  Residue ≥ 70th percentile  →  🔴 Plant Zone
-BSI ≥ 70th percentile  only                            →  🟠 Policy Zone
-Below thresholds                                        →  ⚫ Low Priority
-```
+## Data Sources
 
----
+| Source | Data | Volume |
+|---|---|---|
+| NASA FIRMS (VIIRS) | Satellite fire detections | 8.7M points (2015-2023) |
+| State Govt. / FAOSTAT | Crop production volume and area | 13 years (Punjab), 1 year (Haryana) |
+| NASA POWER | Daily temperature, rainfall, humidity, windspeed | Full study period |
+| ICAR / MNRE | Biomass-to-energy conversion metrics | — |
+| GADM | District administrative shapefiles | 43 districts |
 
-## 🔑 Key Findings
+## Methodology — The Three-Module Framework
 
-- **9 Plant Zone districts** identified: Sangrur, Bathinda, Muktsar, Fazilka, Sirsa, Ferozepur, Fatehabad, Moga, and Mansa
-- **Top BSI district**: Sangrur (BSI = 100.0) with 19,313 peak annual fire detections
-- **Top revenue potential**: Sangrur ≈ ₹85 Cr/yr, Ludhiana ≈ ₹73 Cr/yr
-- **PCA variance explained**: PC1 = 53.6%, PC1+PC2 = 87.0% — 4 environmental features well-captured
-- **Mann-Kendall trends**: 2 of 43 districts show statistically significant trends (p < 0.05)
+The pipeline runs across **17 modular Jupyter notebooks** (Python, Pandas, NumPy, Scikit-learn), organized into three analytical modules that feed a final decision layer.
 
----
+### Module A — Urgency: Burning Risk Assessment (BRS, 0-100)
 
-## 🗂️ Repository Structure
+Filters 1.8 million fire points to quantify historical burning intensity and current trajectory using a **Mann-Kendall trend test**.
 
-```
-crop-residue-bioenergy-dashboard/
-│
-├── app/
-│   └── dashboard.py              ← Streamlit app (main file)
-│
-├── data/
-│   └── processed/                ← All cleaned CSV files (no raw data)
-│       ├── burning_risk_scores.csv   ← NB06 output: BRS + risk_class per district
-│       ├── bioenergy_scores.csv      ← NB10 output: BPS + CBG revenue per district
-│       ├── bsi_scores.csv            ← NB14 output: BSI 0–100 per district
-│       ├── district_clusters.csv     ← NB13 output: K-Means zone per district
-│       ├── env_features.csv          ← NB11 output: 4 env features per district
-│       ├── fire_stats.csv            ← NB04 output: annual fire stats per district
-│       └── fire_trends.csv           ← NB05 output: Mann-Kendall results
-│
-├── outputs/
-│   └── maps/                     ← Pre-generated map PNGs
-│       ├── 15_bsi_map.png            ← BSI choropleth (NB15)
-│       ├── 15_cluster_map.png        ← K-Means zone map (NB15)
-│       ├── 15_top5_burning.png       ← Top-5 BSI districts highlighted (NB15)
-│       └── 16_final_decision_map.png ← Plant/Policy/Low Priority zones (NB16)
-│
-├── requirements.txt              ← Python dependencies for Streamlit Cloud
-├── .gitignore                    ← Excludes raw data, notebooks, pickles
-└── README.md                     ← This file
-```
+![Burning Risk Score continuous map, 0-100 scale](assets/brs_continuous_map.png)
 
----
+![Burning Risk Classification map by category](assets/brs_classified_map.png)
 
-## ⚡ Local Setup
+- Increasing risk trend detected in Faridabad.
+- Decreasing risk trend detected in Sirsa.
+- Highest urgency: Sangrur (BRS 93.1), followed by Ferozepur (83.5).
 
-```bash
-# 1. Clone the repo
-git clone https://github.com/YOUR_USERNAME/crop-residue-bioenergy-dashboard.git
-cd crop-residue-bioenergy-dashboard
+### Module B — Opportunity: Bioenergy Potential (BPS, 0-100)
 
-# 2. Install dependencies
-pip install -r requirements.txt
+Builds a residue-to-revenue logic tree: converts burned/recoverable residue fractions into energy yield (GJ/tonne to kg CBG) and projects revenue at the SATAT-preferred price of ₹46/kg.
 
-# 3. Run the dashboard
-streamlit run app/dashboard.py
-```
+- Sangrur scores a perfect BPS of 100, representing an estimated ₹85 Crore/year bioenergy opportunity.
 
-Dashboard opens at **http://localhost:8501**
+### Module C — Context: Environmental Severity (BSI, 0-100)
 
----
+Reduces high-dimensional climate and fire data via **Principal Component Analysis (PCA)**, then applies **K-Means clustering** to group 43 districts into 3 severity zones.
 
-## ☁️ Streamlit Cloud Deployment
+![PCA scree plot showing variance explained per component](assets/pca_scree_plot.png)
 
-1. Go to [share.streamlit.io](https://share.streamlit.io) and sign in with GitHub
-2. Click **New app**
-3. Select your repo → Branch: `main` → Main file: `app/dashboard.py`
-4. Click **Deploy**
+![K-Means optimal k selection via elbow curve and silhouette score](assets/kmeans_optimal_k.png)
 
-> **Note:** `geopandas` is intentionally excluded from `requirements.txt`. Maps are pre-generated PNGs so no spatial dependencies are needed at runtime on Streamlit Cloud.
+![Burning Severity Index map, PCA-weighted](assets/bsi_map.png)
 
----
+![Environmental intervention zones from K-Means clustering, k=3](assets/intervention_zones_map.png)
 
-## 🛠️ Tech Stack
+- Validated with elbow curve and silhouette score analysis.
+- Stability confirmed via 200 bootstrap iterations — critical districts (e.g., Sangrur, Bhatinda) remain firmly placed regardless of data noise.
 
-| Tool | Purpose |
-|------|---------|
-| **NASA FIRMS VIIRS** | 9 years of active fire detection data (375m resolution) |
-| **GeoPandas** | Spatial join of fire points to GADM district polygons |
-| **pymannkendall** | Non-parametric trend test on annual fire time series |
-| **scikit-learn** | K-Means clustering + PCA for BSI derivation + MinMaxScaler |
-| **Plotly** | Interactive charts in Streamlit dashboard |
-| **Streamlit** | Web dashboard deployment |
+### Synthesis — The Decision Matrix
 
----
+Combines all three scores into a prioritization matrix (Prime Intervention Targets / Policy-Subsidy Required / Low Priority) and a final plant zone recommendation covering 9 districts.
 
-## 📓 Notebook Pipeline (in order)
+![Top 5 highest Burning Severity Index districts](assets/top5_bsi_districts.png)
+
+![Decision space scatter plot: BSI versus recoverable residue](assets/decision_space_scatter.png)
+
+![Final bioenergy plant site selection decision map](assets/final_decision_map.png)
+
+## Model Validation
+
+- **200 validation rounds** with 80% random subsampling (37/47 districts per round).
+- **97.8% of districts (46/47)** remained stably classified across all rounds.
+- Only **Hisar** showed borderline behavior, a genuinely mixed fire/residue profile sitting at a natural cluster boundary, not a modeling error.
+
+![Bootstrap cluster stability by district, 200 rounds](assets/bootstrap_stability_barchart.png)
+
+![Bootstrap stability distribution by cluster](assets/bootstrap_stability_by_cluster.png)
+
+![Silhouette score versus bootstrap stability by district](assets/stability_vs_silhouette.png)
+
+## Data Reliability and Confidence Index
+
+Punjab and Haryana are scored using an identical methodology but reported with **different confidence tiers**, reflecting real differences in data depth.
+
+| Attribute | Punjab | Haryana |
+|---|---|---|
+| Crop data depth | 13 years (robust, multi-season) | 1 year (2022-23, limited) |
+| Confidence level | High / Final | Preliminary |
+| Recommended next step | Immediate site feasibility studies | Multi-year validation |
+| Priority districts | Sangrur, Ludhiana, Patiala | Sirsa, Fatehabad, Hisar |
+
+This distinction was a deliberate design choice — the project avoids overstating certainty in regions where the underlying data doesn't yet support it.
+
+## Dashboard
+
+An interactive **Streamlit** dashboard exposes district-level scores, trend maps, and the final decision matrix to non-technical stakeholders (policymakers, investors).
+
+## Repository Structure
 
 ```
-NB01 → Setup spatial (filter GADM to 43 Punjab+Haryana districts)
-NB02 → Fire processing (load + filter 8.7M VIIRS records)
-NB03 → Spatial join (fire points → district polygons, 1.17M matched)
-NB04 → Fire aggregation (district × year: count, FRP, onset, peak week)
-NB05 → Trend analysis (Mann-Kendall per district, 2015–2023)
-NB06 → BRS score (fire freq 40% + FRP 30% + slope 30%)
-NB07 → BRS map (choropleth: continuous + classified)
-NB08 → Crop cleaning (Punjab multi-year + Haryana 2022-23, 611 rows)
-NB09 → Residue calculation (RPR × burn fraction × 70% recovery)
-NB10 → Bioenergy calculation (LHV → GEP → CBG → ₹ revenue → BPS)
-NB11 → Environmental feature engineering (fire + residue + NASA POWER weather)
-NB12 → StandardScaler (zero mean, unit variance for K-Means + PCA)
-NB13 → K-Means k=3 (environmental intervention zones)
-NB14 → PCA + BSI (PC1 loadings → data-driven weights → BSI 0–100)
-NB15 → Maps visualisation (BSI map + zone map + top-5 map)
-NB16 → Final decision map (BSI × residue 70th-pct thresholds)
+AgroFlame/
+├── Docs/                 # Project documentation and reference material
+├── Notebooks/             # NB01-NB17: end-to-end pipeline (ingestion, ML, validation)
+├── Outputs/               # Final scores, cluster assignments, decision matrix
+├── assets/                # Result maps and charts (referenced in this README)
+├── data/                  # Raw and processed datasets (FIRMS, crop stats, climate)
+├── PROPOSAL.md            # Original project proposal
+├── README.md
+├── main.py                # Entry point / Streamlit app launcher
+└── requirements.txt       # Python dependencies
 ```
 
----
+## Tech Stack
 
-## 📚 Data Sources
+**Python** (Pandas, NumPy, Scikit-learn) across 17 Jupyter notebooks for the end-to-end pipeline. **Mann-Kendall trend test** for burning trajectory detection. **PCA** and **K-Means clustering** for environmental severity zoning, validated with elbow curve, silhouette score, and 200-round bootstrap resampling. **Streamlit** for the public-facing interactive dashboard.
 
-| Dataset | Source |
-|---------|--------|
-| Active fire detections | NASA FIRMS VIIRS S-NPP + NOAA-20 (2015–2023) |
-| District boundaries | GADM India Level 2 |
-| Crop production | Punjab Statistical Abstract, Haryana Statistical Abstract |
-| Weather (temp + rainfall) | NASA POWER API |
-| RPR & burn fractions | MNRE / ICAR standard values |
+## Future Scope
 
----
+- Extend multi-year crop data coverage to Haryana to upgrade its confidence tier.
+- Integrate real-time VIIRS feeds for live fire-season monitoring.
+- Add site-level feasibility scoring for the 9 recommended plant-zone districts.
 
-## 🎓 Academic Context
+## Team
 
-M.Sc. Semester 2 Research Project | Dehradun, India  
-*Crop residue burning in Punjab and Haryana contributes significantly to seasonal air quality crises in north India. This project identifies optimal locations for compressed biogas plants as an economic incentive for farmers to divert residue from burning to bioenergy.*
+Dhruv S. Soni, Mehul B. Chaudhary, Yash D. Daslaniya, Maharshi K. Patel, Tushar J. Vadodariya, Gopal Patidar
+
+Submitted to: Mr. Prasun Kumar Gupta
+
+## License
+
+This project is licensed under the MIT License — see LICENSE for details.
