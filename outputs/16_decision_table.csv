@@ -1,0 +1,44 @@
+rank,district,BSI,residue,zone,final_zone
+1,Sangrur,100.0,842632.2692307692,Low Priority Zone,Plant Zone
+2,Bathinda,95.1,624565.0384615385,Low Priority Zone,Plant Zone
+3,Muktsar,90.0,531841.4230769231,Low Priority Zone,Plant Zone
+4,Fazilka,88.5,455995.9090909091,Low Priority Zone,Policy Zone
+5,Sirsa,84.4,608702.5,Low Priority Zone,Plant Zone
+6,Ferozepur,83.0,334753.7307692307,Low Priority Zone,Policy Zone
+7,Fatehabad,80.8,575715.0,Low Priority Zone,Plant Zone
+8,Moga,80.6,514686.57692307694,Low Priority Zone,Plant Zone
+9,Mansa,78.0,413509.3846153846,Low Priority Zone,Policy Zone
+10,Hisar,77.0,511735.0,Low Priority Zone,Plant Zone
+11,Ludhiana,76.0,724837.6153846154,Low Priority Zone,Plant Zone
+12,Faridkot,74.3,319936.3461538461,Low Priority Zone,Policy Zone
+13,Patiala,71.3,638370.6538461539,Low Priority Zone,Plant Zone
+14,Jind,71.1,589802.5,Low Priority Zone,Low Priority
+15,Barnala,70.3,334753.7307692307,Low Priority Zone,Low Priority
+16,Tarn Taran,68.2,465226.46153846144,Low Priority Zone,Low Priority
+17,Kaithal,67.1,613112.5,Low Priority Zone,Low Priority
+18,Karnal,66.6,650387.5,Low Priority Zone,Low Priority
+19,Amritsar,64.4,457022.99999999994,Low Priority Zone,Low Priority
+20,Palwal,63.2,199080.0,Moderate Zone,Low Priority
+21,Sonipat,62.6,369337.5,Moderate Zone,Low Priority
+22,Fatehgarh Sahib,62.5,235977.2692307692,Moderate Zone,Low Priority
+23,Mahendragarh,62.5,51205.0,Moderate Zone,Low Priority
+24,Nuh,61.8,112367.5,Moderate Zone,Low Priority
+25,Jhajjar,61.5,213377.5,Moderate Zone,Low Priority
+26,Bhiwani,61.5,169662.5,Moderate Zone,Low Priority
+27,Mohali,61.3,334753.7307692307,Moderate Zone,Low Priority
+28,Rewari,60.4,55352.5,Moderate Zone,Low Priority
+29,Rohtak,59.3,250075.0,Moderate Zone,Low Priority
+30,Nawanshahr,59.1,191685.03846153847,Moderate Zone,Low Priority
+31,Gurugram,57.2,62912.49999999999,Moderate Zone,Low Priority
+32,Faridabad,55.9,61232.5,Moderate Zone,Low Priority
+33,Jalandhar,55.4,450851.96153846144,High Stress / High Opportunity,Low Priority
+34,Panipat,53.9,234412.5,Moderate Zone,Low Priority
+35,Kurukshetra,50.9,410900.0,High Stress / High Opportunity,Low Priority
+36,Kapurthala,49.8,291798.49999999994,High Stress / High Opportunity,Low Priority
+37,Hoshiarpur,47.1,291947.92307692306,High Stress / High Opportunity,Low Priority
+38,Gurdaspur,45.5,450338.0,High Stress / High Opportunity,Low Priority
+39,Rupnagar,43.7,144642.34615384616,High Stress / High Opportunity,Low Priority
+40,Yamunanagar,40.8,292442.5,High Stress / High Opportunity,Low Priority
+41,Ambala,38.6,301945.0,High Stress / High Opportunity,Low Priority
+42,Panchkula,30.8,40985.0,High Stress / High Opportunity,Low Priority
+43,Pathankot,0.0,79552.77272727272,High Stress / High Opportunity,Low Priority
