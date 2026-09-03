@@ -1,0 +1,612 @@
+state,district,year,crop,production_t
+Punjab,Amritsar,2010 - 2011,Rice,503000.0
+Punjab,Amritsar,2011 - 2012,Rice,482000.0
+Punjab,Amritsar,2012 - 2013,Rice,544000.0
+Punjab,Amritsar,2013 - 2014,Rice,518000.0
+Punjab,Amritsar,2014 - 2015,Rice,505000.0
+Punjab,Amritsar,2015 - 2016,Rice,513000.0
+Punjab,Amritsar,2016 - 2017,Rice,574000.0
+Punjab,Amritsar,2017 - 2018,Rice,677000.0
+Punjab,Amritsar,2018 - 2019,Rice,537000.0
+Punjab,Amritsar,2019 - 2020,Rice,598000.0
+Punjab,Amritsar,2020 - 2021,Rice,617000.0
+Punjab,Amritsar,2021 - 2022,Rice,659000.0
+Punjab,Amritsar,2022 - 2023,Rice,644000.0
+Punjab,Barnala,2010 - 2011,Rice,465000.0
+Punjab,Barnala,2011 - 2012,Rice,459000.0
+Punjab,Barnala,2012 - 2013,Rice,490000.0
+Punjab,Barnala,2013 - 2014,Rice,500000.0
+Punjab,Barnala,2014 - 2015,Rice,507000.0
+Punjab,Barnala,2015 - 2016,Rice,511000.0
+Punjab,Barnala,2016 - 2017,Rice,516000.0
+Punjab,Barnala,2017 - 2018,Rice,565000.0
+Punjab,Barnala,2018 - 2019,Rice,567000.0
+Punjab,Barnala,2019 - 2020,Rice,525000.0
+Punjab,Barnala,2020 - 2021,Rice,602000.0
+Punjab,Barnala,2021 - 2022,Rice,551000.0
+Punjab,Barnala,2022 - 2023,Rice,601000.0
+Punjab,Bathinda,2010 - 2011,Rice,437000.0
+Punjab,Bathinda,2011 - 2012,Rice,409000.0
+Punjab,Bathinda,2012 - 2013,Rice,458000.0
+Punjab,Bathinda,2013 - 2014,Rice,501000.0
+Punjab,Bathinda,2014 - 2015,Rice,529000.0
+Punjab,Bathinda,2015 - 2016,Rice,620000.0
+Punjab,Bathinda,2016 - 2017,Rice,689000.0
+Punjab,Bathinda,2017 - 2018,Rice,747000.0
+Punjab,Bathinda,2018 - 2019,Rice,762000.0
+Punjab,Bathinda,2019 - 2020,Rice,764000.0
+Punjab,Bathinda,2020 - 2021,Rice,822000.0
+Punjab,Bathinda,2021 - 2022,Rice,829000.0
+Punjab,Bathinda,2022 - 2023,Rice,901000.0
+Punjab,Faridkot,2010 - 2011,Rice,409000.0
+Punjab,Faridkot,2011 - 2012,Rice,405000.0
+Punjab,Faridkot,2012 - 2013,Rice,444000.0
+Punjab,Faridkot,2013 - 2014,Rice,443000.0
+Punjab,Faridkot,2014 - 2015,Rice,421000.0
+Punjab,Faridkot,2015 - 2016,Rice,439000.0
+Punjab,Faridkot,2016 - 2017,Rice,468000.0
+Punjab,Faridkot,2017 - 2018,Rice,511000.0
+Punjab,Faridkot,2018 - 2019,Rice,477000.0
+Punjab,Faridkot,2019 - 2020,Rice,436000.0
+Punjab,Faridkot,2020 - 2021,Rice,477000.0
+Punjab,Faridkot,2021 - 2022,Rice,503000.0
+Punjab,Faridkot,2022 - 2023,Rice,519000.0
+Punjab,Fatehgarh sahib,2010 - 2011,Rice,366000.0
+Punjab,Fatehgarh sahib,2011 - 2012,Rice,364000.0
+Punjab,Fatehgarh sahib,2012 - 2013,Rice,384000.0
+Punjab,Fatehgarh sahib,2013 - 2014,Rice,351000.0
+Punjab,Fatehgarh sahib,2014 - 2015,Rice,374000.0
+Punjab,Fatehgarh sahib,2015 - 2016,Rice,384000.0
+Punjab,Fatehgarh sahib,2016 - 2017,Rice,405000.0
+Punjab,Fatehgarh sahib,2017 - 2018,Rice,395000.0
+Punjab,Fatehgarh sahib,2018 - 2019,Rice,347000.0
+Punjab,Fatehgarh sahib,2019 - 2020,Rice,366000.0
+Punjab,Fatehgarh sahib,2020 - 2021,Rice,414000.0
+Punjab,Fatehgarh sahib,2021 - 2022,Rice,412000.0
+Punjab,Fatehgarh sahib,2022 - 2023,Rice,352000.0
+Punjab,Fazilka,2012 - 2013,Rice,291000.0
+Punjab,Fazilka,2013 - 2014,Rice,293000.0
+Punjab,Fazilka,2014 - 2015,Rice,297000.0
+Punjab,Fazilka,2015 - 2016,Rice,298000.0
+Punjab,Fazilka,2016 - 2017,Rice,391000.0
+Punjab,Fazilka,2017 - 2018,Rice,355000.0
+Punjab,Fazilka,2018 - 2019,Rice,376000.0
+Punjab,Fazilka,2019 - 2020,Rice,775000.0
+Punjab,Fazilka,2020 - 2021,Rice,380000.0
+Punjab,Fazilka,2021 - 2022,Rice,355000.0
+Punjab,Fazilka,2022 - 2023,Rice,379000.0
+Punjab,Firozepur,2010 - 2011,Rice,954000.0
+Punjab,Firozepur,2011 - 2012,Rice,889000.0
+Punjab,Firozepur,2012 - 2013,Rice,766000.0
+Punjab,Firozepur,2013 - 2014,Rice,766000.0
+Punjab,Firozepur,2014 - 2015,Rice,733000.0
+Punjab,Firozepur,2015 - 2016,Rice,729000.0
+Punjab,Firozepur,2016 - 2017,Rice,791000.0
+Punjab,Firozepur,2017 - 2018,Rice,842000.0
+Punjab,Firozepur,2018 - 2019,Rice,829000.0
+Punjab,Firozepur,2019 - 2020,Rice,307000.0
+Punjab,Firozepur,2020 - 2021,Rice,823000.0
+Punjab,Firozepur,2021 - 2022,Rice,827000.0
+Punjab,Firozepur,2022 - 2023,Rice,897000.0
+Punjab,Gurdaspur,2010 - 2011,Rice,705000.0
+Punjab,Gurdaspur,2011 - 2012,Rice,649000.0
+Punjab,Gurdaspur,2012 - 2013,Rice,542000.0
+Punjab,Gurdaspur,2013 - 2014,Rice,507000.0
+Punjab,Gurdaspur,2014 - 2015,Rice,452000.0
+Punjab,Gurdaspur,2015 - 2016,Rice,500000.0
+Punjab,Gurdaspur,2016 - 2017,Rice,557000.0
+Punjab,Gurdaspur,2017 - 2018,Rice,643000.0
+Punjab,Gurdaspur,2018 - 2019,Rice,632000.0
+Punjab,Gurdaspur,2019 - 2020,Rice,637000.0
+Punjab,Gurdaspur,2020 - 2021,Rice,680000.0
+Punjab,Gurdaspur,2021 - 2022,Rice,671000.0
+Punjab,Gurdaspur,2022 - 2023,Rice,631000.0
+Punjab,Hoshiarpur,2010 - 2011,Rice,261000.0
+Punjab,Hoshiarpur,2011 - 2012,Rice,269000.0
+Punjab,Hoshiarpur,2012 - 2013,Rice,252000.0
+Punjab,Hoshiarpur,2013 - 2014,Rice,252000.0
+Punjab,Hoshiarpur,2014 - 2015,Rice,244000.0
+Punjab,Hoshiarpur,2015 - 2016,Rice,255000.0
+Punjab,Hoshiarpur,2016 - 2017,Rice,287000.0
+Punjab,Hoshiarpur,2017 - 2018,Rice,292000.0
+Punjab,Hoshiarpur,2018 - 2019,Rice,279000.0
+Punjab,Hoshiarpur,2019 - 2020,Rice,312000.0
+Punjab,Hoshiarpur,2020 - 2021,Rice,330000.0
+Punjab,Hoshiarpur,2021 - 2022,Rice,291000.0
+Punjab,Hoshiarpur,2022 - 2023,Rice,255000.0
+Punjab,Jalandhar,2010 - 2011,Rice,588000.0
+Punjab,Jalandhar,2011 - 2012,Rice,583000.0
+Punjab,Jalandhar,2012 - 2013,Rice,625000.0
+Punjab,Jalandhar,2013 - 2014,Rice,596000.0
+Punjab,Jalandhar,2014 - 2015,Rice,616000.0
+Punjab,Jalandhar,2015 - 2016,Rice,653000.0
+Punjab,Jalandhar,2016 - 2017,Rice,699000.0
+Punjab,Jalandhar,2017 - 2018,Rice,715000.0
+Punjab,Jalandhar,2018 - 2019,Rice,719000.0
+Punjab,Jalandhar,2019 - 2020,Rice,713000.0
+Punjab,Jalandhar,2020 - 2021,Rice,797000.0
+Punjab,Jalandhar,2021 - 2022,Rice,747000.0
+Punjab,Jalandhar,2022 - 2023,Rice,733000.0
+Punjab,Kapurthala,2010 - 2011,Rice,460000.0
+Punjab,Kapurthala,2011 - 2012,Rice,433000.0
+Punjab,Kapurthala,2012 - 2013,Rice,445000.0
+Punjab,Kapurthala,2013 - 2014,Rice,451000.0
+Punjab,Kapurthala,2014 - 2015,Rice,439000.0
+Punjab,Kapurthala,2015 - 2016,Rice,474000.0
+Punjab,Kapurthala,2016 - 2017,Rice,483000.0
+Punjab,Kapurthala,2017 - 2018,Rice,513000.0
+Punjab,Kapurthala,2018 - 2019,Rice,512000.0
+Punjab,Kapurthala,2019 - 2020,Rice,496000.0
+Punjab,Kapurthala,2020 - 2021,Rice,511000.0
+Punjab,Kapurthala,2021 - 2022,Rice,503000.0
+Punjab,Kapurthala,2022 - 2023,Rice,509000.0
+Punjab,Ludhiana,2010 - 2011,Rice,1133000.0
+Punjab,Ludhiana,2011 - 2012,Rice,1094000.0
+Punjab,Ludhiana,2012 - 2013,Rice,1169000.0
+Punjab,Ludhiana,2013 - 2014,Rice,1137000.0
+Punjab,Ludhiana,2014 - 2015,Rice,1119000.0
+Punjab,Ludhiana,2015 - 2016,Rice,1181000.0
+Punjab,Ludhiana,2016 - 2017,Rice,1247000.0
+Punjab,Ludhiana,2017 - 2018,Rice,1224000.0
+Punjab,Ludhiana,2018 - 2019,Rice,1153000.0
+Punjab,Ludhiana,2019 - 2020,Rice,1211000.0
+Punjab,Ludhiana,2020 - 2021,Rice,1264000.0
+Punjab,Ludhiana,2021 - 2022,Rice,1246000.0
+Punjab,Ludhiana,2022 - 2023,Rice,1236000.0
+Punjab,Malerkotla,2021 - 2022,Rice,279000.0
+Punjab,Malerkotla,2022 - 2023,Rice,277000.0
+Punjab,Mansa,2010 - 2011,Rice,316000.0
+Punjab,Mansa,2011 - 2012,Rice,292000.0
+Punjab,Mansa,2012 - 2013,Rice,321000.0
+Punjab,Mansa,2013 - 2014,Rice,334000.0
+Punjab,Mansa,2014 - 2015,Rice,296000.0
+Punjab,Mansa,2015 - 2016,Rice,363000.0
+Punjab,Mansa,2016 - 2017,Rice,442000.0
+Punjab,Mansa,2017 - 2018,Rice,499000.0
+Punjab,Mansa,2018 - 2019,Rice,514000.0
+Punjab,Mansa,2019 - 2020,Rice,489000.0
+Punjab,Mansa,2020 - 2021,Rice,578000.0
+Punjab,Mansa,2021 - 2022,Rice,561000.0
+Punjab,Mansa,2022 - 2023,Rice,593000.0
+Punjab,Moga,2010 - 2011,Rice,745000.0
+Punjab,Moga,2011 - 2012,Rice,759000.0
+Punjab,Moga,2012 - 2013,Rice,794000.0
+Punjab,Moga,2013 - 2014,Rice,815000.0
+Punjab,Moga,2014 - 2015,Rice,815000.0
+Punjab,Moga,2015 - 2016,Rice,871000.0
+Punjab,Moga,2016 - 2017,Rice,816000.0
+Punjab,Moga,2017 - 2018,Rice,869000.0
+Punjab,Moga,2018 - 2019,Rice,817000.0
+Punjab,Moga,2019 - 2020,Rice,826000.0
+Punjab,Moga,2020 - 2021,Rice,892000.0
+Punjab,Moga,2021 - 2022,Rice,861000.0
+Punjab,Moga,2022 - 2023,Rice,927000.0
+Punjab,Muktsar,2010 - 2011,Rice,432000.0
+Punjab,Muktsar,2011 - 2012,Rice,402000.0
+Punjab,Muktsar,2012 - 2013,Rice,471000.0
+Punjab,Muktsar,2013 - 2014,Rice,457000.0
+Punjab,Muktsar,2014 - 2015,Rice,514000.0
+Punjab,Muktsar,2015 - 2016,Rice,667000.0
+Punjab,Muktsar,2016 - 2017,Rice,699000.0
+Punjab,Muktsar,2017 - 2018,Rice,687000.0
+Punjab,Muktsar,2018 - 2019,Rice,728000.0
+Punjab,Muktsar,2019 - 2020,Rice,637000.0
+Punjab,Muktsar,2020 - 2021,Rice,809000.0
+Punjab,Muktsar,2021 - 2022,Rice,766000.0
+Punjab,Muktsar,2022 - 2023,Rice,754000.0
+Punjab,Nawanshahr,2010 - 2011,Rice,231000.0
+Punjab,Nawanshahr,2011 - 2012,Rice,226000.0
+Punjab,Nawanshahr,2012 - 2013,Rice,236000.0
+Punjab,Nawanshahr,2013 - 2014,Rice,202000.0
+Punjab,Nawanshahr,2014 - 2015,Rice,226000.0
+Punjab,Nawanshahr,2015 - 2016,Rice,252000.0
+Punjab,Nawanshahr,2016 - 2017,Rice,260000.0
+Punjab,Nawanshahr,2017 - 2018,Rice,282000.0
+Punjab,Nawanshahr,2018 - 2019,Rice,237000.0
+Punjab,Nawanshahr,2019 - 2020,Rice,251000.0
+Punjab,Nawanshahr,2020 - 2021,Rice,270000.0
+Punjab,Nawanshahr,2021 - 2022,Rice,275000.0
+Punjab,Nawanshahr,2022 - 2023,Rice,224000.0
+Punjab,Pathankot,2012 - 2013,Rice,76000.0
+Punjab,Pathankot,2013 - 2014,Rice,78000.0
+Punjab,Pathankot,2014 - 2015,Rice,72000.0
+Punjab,Pathankot,2015 - 2016,Rice,88000.0
+Punjab,Pathankot,2016 - 2017,Rice,77000.0
+Punjab,Pathankot,2017 - 2018,Rice,86000.0
+Punjab,Pathankot,2018 - 2019,Rice,91000.0
+Punjab,Pathankot,2019 - 2020,Rice,86000.0
+Punjab,Pathankot,2020 - 2021,Rice,105000.0
+Punjab,Pathankot,2021 - 2022,Rice,97000.0
+Punjab,Pathankot,2022 - 2023,Rice,82000.0
+Punjab,Patiala,2010 - 2011,Rice,873000.0
+Punjab,Patiala,2011 - 2012,Rice,903000.0
+Punjab,Patiala,2012 - 2013,Rice,922000.0
+Punjab,Patiala,2013 - 2014,Rice,959000.0
+Punjab,Patiala,2014 - 2015,Rice,904000.0
+Punjab,Patiala,2015 - 2016,Rice,910000.0
+Punjab,Patiala,2016 - 2017,Rice,984000.0
+Punjab,Patiala,2017 - 2018,Rice,1001000.0
+Punjab,Patiala,2018 - 2019,Rice,920000.0
+Punjab,Patiala,2019 - 2020,Rice,928000.0
+Punjab,Patiala,2020 - 2021,Rice,1048000.0
+Punjab,Patiala,2021 - 2022,Rice,1008000.0
+Punjab,Patiala,2022 - 2023,Rice,966000.0
+Punjab,Rupnagar,2010 - 2011,Rice,147000.0
+Punjab,Rupnagar,2011 - 2012,Rice,127000.0
+Punjab,Rupnagar,2012 - 2013,Rice,145000.0
+Punjab,Rupnagar,2013 - 2014,Rice,128000.0
+Punjab,Rupnagar,2014 - 2015,Rice,129000.0
+Punjab,Rupnagar,2015 - 2016,Rice,161000.0
+Punjab,Rupnagar,2016 - 2017,Rice,172000.0
+Punjab,Rupnagar,2017 - 2018,Rice,170000.0
+Punjab,Rupnagar,2018 - 2019,Rice,142000.0
+Punjab,Rupnagar,2019 - 2020,Rice,144000.0
+Punjab,Rupnagar,2020 - 2021,Rice,180000.0
+Punjab,Rupnagar,2021 - 2022,Rice,169000.0
+Punjab,Rupnagar,2022 - 2023,Rice,149000.0
+Punjab,S.a.s nagar,2010 - 2011,Rice,127000.0
+Punjab,S.a.s nagar,2011 - 2012,Rice,119000.0
+Punjab,S.a.s nagar,2012 - 2013,Rice,117000.0
+Punjab,S.a.s nagar,2013 - 2014,Rice,95000.0
+Punjab,S.a.s nagar,2014 - 2015,Rice,94000.0
+Punjab,S.a.s nagar,2015 - 2016,Rice,116000.0
+Punjab,S.a.s nagar,2016 - 2017,Rice,112000.0
+Punjab,S.a.s nagar,2017 - 2018,Rice,108000.0
+Punjab,S.a.s nagar,2018 - 2019,Rice,102000.0
+Punjab,S.a.s nagar,2019 - 2020,Rice,105000.0
+Punjab,S.a.s nagar,2020 - 2021,Rice,101000.0
+Punjab,S.a.s nagar,2021 - 2022,Rice,113000.0
+Punjab,S.a.s nagar,2022 - 2023,Rice,127000.0
+Punjab,Sangrur,2010 - 2011,Rice,1185000.0
+Punjab,Sangrur,2011 - 2012,Rice,1188000.0
+Punjab,Sangrur,2012 - 2013,Rice,1299000.0
+Punjab,Sangrur,2013 - 2014,Rice,1290000.0
+Punjab,Sangrur,2014 - 2015,Rice,1281000.0
+Punjab,Sangrur,2015 - 2016,Rice,1334000.0
+Punjab,Sangrur,2016 - 2017,Rice,1355000.0
+Punjab,Sangrur,2017 - 2018,Rice,1442000.0
+Punjab,Sangrur,2018 - 2019,Rice,1353000.0
+Punjab,Sangrur,2019 - 2020,Rice,1362000.0
+Punjab,Sangrur,2020 - 2021,Rice,1531000.0
+Punjab,Sangrur,2021 - 2022,Rice,1195000.0
+Punjab,Sangrur,2022 - 2023,Rice,1231000.0
+Punjab,Tarn taran,2010 - 2011,Rice,500000.0
+Punjab,Tarn taran,2011 - 2012,Rice,490000.0
+Punjab,Tarn taran,2012 - 2013,Rice,599000.0
+Punjab,Tarn taran,2013 - 2014,Rice,594000.0
+Punjab,Tarn taran,2014 - 2015,Rice,540000.0
+Punjab,Tarn taran,2015 - 2016,Rice,504000.0
+Punjab,Tarn taran,2016 - 2017,Rice,614000.0
+Punjab,Tarn taran,2017 - 2018,Rice,759000.0
+Punjab,Tarn taran,2018 - 2019,Rice,728000.0
+Punjab,Tarn taran,2019 - 2020,Rice,707000.0
+Punjab,Tarn taran,2020 - 2021,Rice,761000.0
+Punjab,Tarn taran,2021 - 2022,Rice,724000.0
+Punjab,Tarn taran,2022 - 2023,Rice,764000.0
+Punjab,Amritsar,2010 - 2011,Wheat,810000.0
+Punjab,Amritsar,2011 - 2012,Wheat,945000.0
+Punjab,Amritsar,2012 - 2013,Wheat,884000.0
+Punjab,Amritsar,2013 - 2014,Wheat,934000.0
+Punjab,Amritsar,2014 - 2015,Wheat,736000.0
+Punjab,Amritsar,2015 - 2016,Wheat,842000.0
+Punjab,Amritsar,2016 - 2017,Wheat,930000.0
+Punjab,Amritsar,2017 - 2018,Wheat,920000.0
+Punjab,Amritsar,2018 - 2019,Wheat,910000.0
+Punjab,Amritsar,2019 - 2020,Wheat,852000.0
+Punjab,Amritsar,2020 - 2021,Wheat,900000.0
+Punjab,Amritsar,2021 - 2022,Wheat,843000.0
+Punjab,Amritsar,2022 - 2023,Wheat,905400.0
+Punjab,Barnala,2010 - 2011,Wheat,572000.0
+Punjab,Barnala,2011 - 2012,Wheat,615000.0
+Punjab,Barnala,2012 - 2013,Wheat,567000.0
+Punjab,Barnala,2013 - 2014,Wheat,596000.0
+Punjab,Barnala,2014 - 2015,Wheat,527000.0
+Punjab,Barnala,2015 - 2016,Wheat,565000.0
+Punjab,Barnala,2016 - 2017,Wheat,626000.0
+Punjab,Barnala,2017 - 2018,Wheat,609000.0
+Punjab,Barnala,2018 - 2019,Wheat,641000.0
+Punjab,Barnala,2019 - 2020,Wheat,599000.0
+Punjab,Barnala,2020 - 2021,Wheat,546000.0
+Punjab,Barnala,2021 - 2022,Wheat,525000.0
+Punjab,Barnala,2022 - 2023,Wheat,574100.0
+Punjab,Bathinda,2010 - 2011,Wheat,1166000.0
+Punjab,Bathinda,2011 - 2012,Wheat,1260000.0
+Punjab,Bathinda,2012 - 2013,Wheat,1216000.0
+Punjab,Bathinda,2013 - 2014,Wheat,1259000.0
+Punjab,Bathinda,2014 - 2015,Wheat,1218000.0
+Punjab,Bathinda,2015 - 2016,Wheat,1184000.0
+Punjab,Bathinda,2016 - 2017,Wheat,1335000.0
+Punjab,Bathinda,2017 - 2018,Wheat,1345000.0
+Punjab,Bathinda,2018 - 2019,Wheat,1428000.0
+Punjab,Bathinda,2019 - 2020,Wheat,1387000.0
+Punjab,Bathinda,2020 - 2021,Wheat,1266000.0
+Punjab,Bathinda,2021 - 2022,Wheat,1149000.0
+Punjab,Bathinda,2022 - 2023,Wheat,1257300.0
+Punjab,Faridkot,2010 - 2011,Wheat,563000.0
+Punjab,Faridkot,2011 - 2012,Wheat,616000.0
+Punjab,Faridkot,2012 - 2013,Wheat,553000.0
+Punjab,Faridkot,2013 - 2014,Wheat,601000.0
+Punjab,Faridkot,2014 - 2015,Wheat,558000.0
+Punjab,Faridkot,2015 - 2016,Wheat,550000.0
+Punjab,Faridkot,2016 - 2017,Wheat,609000.0
+Punjab,Faridkot,2017 - 2018,Wheat,619000.0
+Punjab,Faridkot,2018 - 2019,Wheat,620000.0
+Punjab,Faridkot,2019 - 2020,Wheat,646000.0
+Punjab,Faridkot,2020 - 2021,Wheat,588000.0
+Punjab,Faridkot,2021 - 2022,Wheat,529000.0
+Punjab,Faridkot,2022 - 2023,Wheat,504500.0
+Punjab,Fatehgarh sahib,2010 - 2011,Wheat,417000.0
+Punjab,Fatehgarh sahib,2011 - 2012,Wheat,449000.0
+Punjab,Fatehgarh sahib,2012 - 2013,Wheat,440000.0
+Punjab,Fatehgarh sahib,2013 - 2014,Wheat,427000.0
+Punjab,Fatehgarh sahib,2014 - 2015,Wheat,340000.0
+Punjab,Fatehgarh sahib,2015 - 2016,Wheat,394000.0
+Punjab,Fatehgarh sahib,2016 - 2017,Wheat,436000.0
+Punjab,Fatehgarh sahib,2017 - 2018,Wheat,454000.0
+Punjab,Fatehgarh sahib,2018 - 2019,Wheat,440000.0
+Punjab,Fatehgarh sahib,2019 - 2020,Wheat,374000.0
+Punjab,Fatehgarh sahib,2020 - 2021,Wheat,422000.0
+Punjab,Fatehgarh sahib,2021 - 2022,Wheat,290000.0
+Punjab,Fatehgarh sahib,2022 - 2023,Wheat,404700.0
+Punjab,Fazilka,2012 - 2013,Wheat,972000.0
+Punjab,Fazilka,2013 - 2014,Wheat,1039000.0
+Punjab,Fazilka,2014 - 2015,Wheat,913000.0
+Punjab,Fazilka,2015 - 2016,Wheat,939000.0
+Punjab,Fazilka,2016 - 2017,Wheat,1023000.0
+Punjab,Fazilka,2017 - 2018,Wheat,1007000.0
+Punjab,Fazilka,2018 - 2019,Wheat,1052000.0
+Punjab,Fazilka,2019 - 2020,Wheat,1016000.0
+Punjab,Fazilka,2020 - 2021,Wheat,984000.0
+Punjab,Fazilka,2021 - 2022,Wheat,873000.0
+Punjab,Fazilka,2022 - 2023,Wheat,925000.0
+Punjab,Firozepur,2010 - 2011,Wheat,1850000.0
+Punjab,Firozepur,2011 - 2012,Wheat,1969000.0
+Punjab,Firozepur,2012 - 2013,Wheat,911000.0
+Punjab,Firozepur,2013 - 2014,Wheat,1001000.0
+Punjab,Firozepur,2014 - 2015,Wheat,877000.0
+Punjab,Firozepur,2015 - 2016,Wheat,862000.0
+Punjab,Firozepur,2016 - 2017,Wheat,959000.0
+Punjab,Firozepur,2017 - 2018,Wheat,977000.0
+Punjab,Firozepur,2018 - 2019,Wheat,1010000.0
+Punjab,Firozepur,2019 - 2020,Wheat,957000.0
+Punjab,Firozepur,2020 - 2021,Wheat,967000.0
+Punjab,Firozepur,2021 - 2022,Wheat,821000.0
+Punjab,Firozepur,2022 - 2023,Wheat,906000.0
+Punjab,Gurdaspur,2010 - 2011,Wheat,919000.0
+Punjab,Gurdaspur,2011 - 2012,Wheat,1098000.0
+Punjab,Gurdaspur,2012 - 2013,Wheat,825000.0
+Punjab,Gurdaspur,2013 - 2014,Wheat,822000.0
+Punjab,Gurdaspur,2014 - 2015,Wheat,627000.0
+Punjab,Gurdaspur,2015 - 2016,Wheat,856000.0
+Punjab,Gurdaspur,2016 - 2017,Wheat,848000.0
+Punjab,Gurdaspur,2017 - 2018,Wheat,876000.0
+Punjab,Gurdaspur,2018 - 2019,Wheat,868000.0
+Punjab,Gurdaspur,2019 - 2020,Wheat,772000.0
+Punjab,Gurdaspur,2020 - 2021,Wheat,840000.0
+Punjab,Gurdaspur,2021 - 2022,Wheat,777000.0
+Punjab,Gurdaspur,2022 - 2023,Wheat,820400.0
+Punjab,Hoshiarpur,2010 - 2011,Wheat,661000.0
+Punjab,Hoshiarpur,2011 - 2012,Wheat,694000.0
+Punjab,Hoshiarpur,2012 - 2013,Wheat,629000.0
+Punjab,Hoshiarpur,2013 - 2014,Wheat,671000.0
+Punjab,Hoshiarpur,2014 - 2015,Wheat,540000.0
+Punjab,Hoshiarpur,2015 - 2016,Wheat,591000.0
+Punjab,Hoshiarpur,2016 - 2017,Wheat,606000.0
+Punjab,Hoshiarpur,2017 - 2018,Wheat,620000.0
+Punjab,Hoshiarpur,2018 - 2019,Wheat,611000.0
+Punjab,Hoshiarpur,2019 - 2020,Wheat,609000.0
+Punjab,Hoshiarpur,2020 - 2021,Wheat,588000.0
+Punjab,Hoshiarpur,2021 - 2022,Wheat,515000.0
+Punjab,Hoshiarpur,2022 - 2023,Wheat,570800.0
+Punjab,Jalandhar,2010 - 2011,Wheat,793000.0
+Punjab,Jalandhar,2011 - 2012,Wheat,866000.0
+Punjab,Jalandhar,2012 - 2013,Wheat,773000.0
+Punjab,Jalandhar,2013 - 2014,Wheat,837000.0
+Punjab,Jalandhar,2014 - 2015,Wheat,685000.0
+Punjab,Jalandhar,2015 - 2016,Wheat,762000.0
+Punjab,Jalandhar,2016 - 2017,Wheat,809000.0
+Punjab,Jalandhar,2017 - 2018,Wheat,861000.0
+Punjab,Jalandhar,2018 - 2019,Wheat,845000.0
+Punjab,Jalandhar,2019 - 2020,Wheat,870000.0
+Punjab,Jalandhar,2020 - 2021,Wheat,845000.0
+Punjab,Jalandhar,2021 - 2022,Wheat,732000.0
+Punjab,Jalandhar,2022 - 2023,Wheat,754300.0
+Punjab,Kapurthala,2010 - 2011,Wheat,480000.0
+Punjab,Kapurthala,2011 - 2012,Wheat,542000.0
+Punjab,Kapurthala,2012 - 2013,Wheat,510000.0
+Punjab,Kapurthala,2013 - 2014,Wheat,548000.0
+Punjab,Kapurthala,2014 - 2015,Wheat,429000.0
+Punjab,Kapurthala,2015 - 2016,Wheat,469000.0
+Punjab,Kapurthala,2016 - 2017,Wheat,522000.0
+Punjab,Kapurthala,2017 - 2018,Wheat,523000.0
+Punjab,Kapurthala,2018 - 2019,Wheat,516000.0
+Punjab,Kapurthala,2019 - 2020,Wheat,507000.0
+Punjab,Kapurthala,2020 - 2021,Wheat,486000.0
+Punjab,Kapurthala,2021 - 2022,Wheat,439000.0
+Punjab,Kapurthala,2022 - 2023,Wheat,484300.0
+Punjab,Ludhiana,2010 - 2011,Wheat,1276000.0
+Punjab,Ludhiana,2011 - 2012,Wheat,1381000.0
+Punjab,Ludhiana,2012 - 2013,Wheat,1242000.0
+Punjab,Ludhiana,2013 - 2014,Wheat,1327000.0
+Punjab,Ludhiana,2014 - 2015,Wheat,1129000.0
+Punjab,Ludhiana,2015 - 2016,Wheat,1172000.0
+Punjab,Ludhiana,2016 - 2017,Wheat,1273000.0
+Punjab,Ludhiana,2017 - 2018,Wheat,1296000.0
+Punjab,Ludhiana,2018 - 2019,Wheat,1288000.0
+Punjab,Ludhiana,2019 - 2020,Wheat,1275000.0
+Punjab,Ludhiana,2020 - 2021,Wheat,1241000.0
+Punjab,Ludhiana,2021 - 2022,Wheat,1044000.0
+Punjab,Ludhiana,2022 - 2023,Wheat,1123400.0
+Punjab,Malerkotla,2021 - 2022,Wheat,227000.0
+Punjab,Malerkotla,2022 - 2023,Wheat,258500.0
+Punjab,Mansa,2010 - 2011,Wheat,830000.0
+Punjab,Mansa,2011 - 2012,Wheat,841000.0
+Punjab,Mansa,2012 - 2013,Wheat,759000.0
+Punjab,Mansa,2013 - 2014,Wheat,854000.0
+Punjab,Mansa,2014 - 2015,Wheat,742000.0
+Punjab,Mansa,2015 - 2016,Wheat,789000.0
+Punjab,Mansa,2016 - 2017,Wheat,876000.0
+Punjab,Mansa,2017 - 2018,Wheat,890000.0
+Punjab,Mansa,2018 - 2019,Wheat,932000.0
+Punjab,Mansa,2019 - 2020,Wheat,922000.0
+Punjab,Mansa,2020 - 2021,Wheat,852000.0
+Punjab,Mansa,2021 - 2022,Wheat,768000.0
+Punjab,Mansa,2022 - 2023,Wheat,854200.0
+Punjab,Moga,2010 - 2011,Wheat,887000.0
+Punjab,Moga,2011 - 2012,Wheat,961000.0
+Punjab,Moga,2012 - 2013,Wheat,871000.0
+Punjab,Moga,2013 - 2014,Wheat,922000.0
+Punjab,Moga,2014 - 2015,Wheat,794000.0
+Punjab,Moga,2015 - 2016,Wheat,805000.0
+Punjab,Moga,2016 - 2017,Wheat,918000.0
+Punjab,Moga,2017 - 2018,Wheat,908000.0
+Punjab,Moga,2018 - 2019,Wheat,941000.0
+Punjab,Moga,2019 - 2020,Wheat,942000.0
+Punjab,Moga,2020 - 2021,Wheat,911000.0
+Punjab,Moga,2021 - 2022,Wheat,778000.0
+Punjab,Moga,2022 - 2023,Wheat,846300.0
+Punjab,Muktsar,2010 - 2011,Wheat,957000.0
+Punjab,Muktsar,2011 - 2012,Wheat,1036000.0
+Punjab,Muktsar,2012 - 2013,Wheat,996000.0
+Punjab,Muktsar,2013 - 2014,Wheat,1058000.0
+Punjab,Muktsar,2014 - 2015,Wheat,907000.0
+Punjab,Muktsar,2015 - 2016,Wheat,969000.0
+Punjab,Muktsar,2016 - 2017,Wheat,1093000.0
+Punjab,Muktsar,2017 - 2018,Wheat,1108000.0
+Punjab,Muktsar,2018 - 2019,Wheat,1192000.0
+Punjab,Muktsar,2019 - 2020,Wheat,1168000.0
+Punjab,Muktsar,2020 - 2021,Wheat,1087000.0
+Punjab,Muktsar,2021 - 2022,Wheat,992000.0
+Punjab,Muktsar,2022 - 2023,Wheat,1019100.0
+Punjab,Nawanshahr,2010 - 2011,Wheat,348000.0
+Punjab,Nawanshahr,2011 - 2012,Wheat,387000.0
+Punjab,Nawanshahr,2012 - 2013,Wheat,382000.0
+Punjab,Nawanshahr,2013 - 2014,Wheat,371000.0
+Punjab,Nawanshahr,2014 - 2015,Wheat,282000.0
+Punjab,Nawanshahr,2015 - 2016,Wheat,368000.0
+Punjab,Nawanshahr,2016 - 2017,Wheat,374000.0
+Punjab,Nawanshahr,2017 - 2018,Wheat,385000.0
+Punjab,Nawanshahr,2018 - 2019,Wheat,385000.0
+Punjab,Nawanshahr,2019 - 2020,Wheat,391000.0
+Punjab,Nawanshahr,2020 - 2021,Wheat,384000.0
+Punjab,Nawanshahr,2021 - 2022,Wheat,299000.0
+Punjab,Nawanshahr,2022 - 2023,Wheat,386300.0
+Punjab,Pathankot,2012 - 2013,Wheat,173000.0
+Punjab,Pathankot,2013 - 2014,Wheat,167000.0
+Punjab,Pathankot,2014 - 2015,Wheat,115000.0
+Punjab,Pathankot,2015 - 2016,Wheat,166000.0
+Punjab,Pathankot,2016 - 2017,Wheat,168000.0
+Punjab,Pathankot,2017 - 2018,Wheat,165000.0
+Punjab,Pathankot,2018 - 2019,Wheat,163000.0
+Punjab,Pathankot,2019 - 2020,Wheat,158000.0
+Punjab,Pathankot,2020 - 2021,Wheat,182000.0
+Punjab,Pathankot,2021 - 2022,Wheat,144000.0
+Punjab,Pathankot,2022 - 2023,Wheat,160300.0
+Punjab,Patiala,2010 - 2011,Wheat,1141000.0
+Punjab,Patiala,2011 - 2012,Wheat,1297000.0
+Punjab,Patiala,2012 - 2013,Wheat,1123000.0
+Punjab,Patiala,2013 - 2014,Wheat,1153000.0
+Punjab,Patiala,2014 - 2015,Wheat,1024000.0
+Punjab,Patiala,2015 - 2016,Wheat,1073000.0
+Punjab,Patiala,2016 - 2017,Wheat,1193000.0
+Punjab,Patiala,2017 - 2018,Wheat,1223000.0
+Punjab,Patiala,2018 - 2019,Wheat,1275000.0
+Punjab,Patiala,2019 - 2020,Wheat,1116000.0
+Punjab,Patiala,2020 - 2021,Wheat,1162000.0
+Punjab,Patiala,2021 - 2022,Wheat,907000.0
+Punjab,Patiala,2022 - 2023,Wheat,1145100.0
+Punjab,Rupnagar,2010 - 2011,Wheat,253000.0
+Punjab,Rupnagar,2011 - 2012,Wheat,297000.0
+Punjab,Rupnagar,2012 - 2013,Wheat,284000.0
+Punjab,Rupnagar,2013 - 2014,Wheat,307000.0
+Punjab,Rupnagar,2014 - 2015,Wheat,266000.0
+Punjab,Rupnagar,2015 - 2016,Wheat,274000.0
+Punjab,Rupnagar,2016 - 2017,Wheat,328000.0
+Punjab,Rupnagar,2017 - 2018,Wheat,326000.0
+Punjab,Rupnagar,2018 - 2019,Wheat,315000.0
+Punjab,Rupnagar,2019 - 2020,Wheat,299000.0
+Punjab,Rupnagar,2020 - 2021,Wheat,310000.0
+Punjab,Rupnagar,2021 - 2022,Wheat,248000.0
+Punjab,Rupnagar,2022 - 2023,Wheat,306300.0
+Punjab,S.a.s nagar,2010 - 2011,Wheat,227000.0
+Punjab,S.a.s nagar,2011 - 2012,Wheat,249000.0
+Punjab,S.a.s nagar,2012 - 2013,Wheat,233000.0
+Punjab,S.a.s nagar,2013 - 2014,Wheat,228000.0
+Punjab,S.a.s nagar,2014 - 2015,Wheat,198000.0
+Punjab,S.a.s nagar,2015 - 2016,Wheat,232000.0
+Punjab,S.a.s nagar,2016 - 2017,Wheat,235000.0
+Punjab,S.a.s nagar,2017 - 2018,Wheat,248000.0
+Punjab,S.a.s nagar,2018 - 2019,Wheat,232000.0
+Punjab,S.a.s nagar,2019 - 2020,Wheat,226000.0
+Punjab,S.a.s nagar,2020 - 2021,Wheat,212000.0
+Punjab,S.a.s nagar,2021 - 2022,Wheat,186000.0
+Punjab,S.a.s nagar,2022 - 2023,Wheat,217000.0
+Punjab,Sangrur,2010 - 2011,Wheat,1472000.0
+Punjab,Sangrur,2011 - 2012,Wheat,1577000.0
+Punjab,Sangrur,2012 - 2013,Wheat,1473000.0
+Punjab,Sangrur,2013 - 2014,Wheat,1567000.0
+Punjab,Sangrur,2014 - 2015,Wheat,1366000.0
+Punjab,Sangrur,2015 - 2016,Wheat,1373000.0
+Punjab,Sangrur,2016 - 2017,Wheat,1589000.0
+Punjab,Sangrur,2017 - 2018,Wheat,1599000.0
+Punjab,Sangrur,2018 - 2019,Wheat,1682000.0
+Punjab,Sangrur,2019 - 2020,Wheat,1678000.0
+Punjab,Sangrur,2020 - 2021,Wheat,1532000.0
+Punjab,Sangrur,2021 - 2022,Wheat,989000.0
+Punjab,Sangrur,2022 - 2023,Wheat,1257700.0
+Punjab,Tarn taran,2010 - 2011,Wheat,850000.0
+Punjab,Tarn taran,2011 - 2012,Wheat,902000.0
+Punjab,Tarn taran,2012 - 2013,Wheat,798000.0
+Punjab,Tarn taran,2013 - 2014,Wheat,931000.0
+Punjab,Tarn taran,2014 - 2015,Wheat,777000.0
+Punjab,Tarn taran,2015 - 2016,Wheat,842000.0
+Punjab,Tarn taran,2016 - 2017,Wheat,886000.0
+Punjab,Tarn taran,2017 - 2018,Wheat,871000.0
+Punjab,Tarn taran,2018 - 2019,Wheat,916000.0
+Punjab,Tarn taran,2019 - 2020,Wheat,855000.0
+Punjab,Tarn taran,2020 - 2021,Wheat,880000.0
+Punjab,Tarn taran,2021 - 2022,Wheat,796000.0
+Punjab,Tarn taran,2022 - 2023,Wheat,886400.0
+Haryana,Ambala,2022-23,Rice,390000.0
+Haryana,Bhiwani,2022-23,Rice,73000.0
+Haryana,Charkhi Dadri,2022-23,Rice,19000.0
+Haryana,Faridabad,2022-23,Rice,43000.0
+Haryana,Fatehabad,2022-23,Rice,586000.0
+Haryana,Gurugram,2022-23,Rice,13000.0
+Haryana,Hisar,2022-23,Rice,304000.0
+Haryana,Jhajjar,2022-23,Rice,149000.0
+Haryana,Jind,2022-23,Rice,573000.0
+Haryana,Kaithal,2022-23,Rice,781000.0
+Haryana,Karnal,2022-23,Rice,719000.0
+Haryana,Kurukshetra,2022-23,Rice,588000.0
+Haryana,Nuh,2022-23,Rice,25000.0
+Haryana,Palwal,2022-23,Rice,108000.0
+Haryana,Panchkula,2022-23,Rice,34000.0
+Haryana,Panipat,2022-23,Rice,245000.0
+Haryana,Rewari,2022-23,Rice,5000.0
+Haryana,Rohtak,2022-23,Rice,230000.0
+Haryana,Sirsa,2022-23,Rice,395000.0
+Haryana,Sonipat,2022-23,Rice,345000.0
+Haryana,Yamunanagar,2022-23,Rice,295000.0
+Haryana,Ambala,2022-23,Wheat,412000.0
+Haryana,Bhiwani,2022-23,Wheat,371000.0
+Haryana,Charkhi Dadri,2022-23,Wheat,138000.0
+Haryana,Faridabad,2022-23,Wheat,118000.0
+Haryana,Fatehabad,2022-23,Wheat,936000.0
+Haryana,Gurugram,2022-23,Wheat,151000.0
+Haryana,Hisar,2022-23,Wheat,1039000.0
+Haryana,Jhajjar,2022-23,Wheat,412000.0
+Haryana,Jind,2022-23,Wheat,985000.0
+Haryana,Kaithal,2022-23,Wheat,847000.0
+Haryana,Karnal,2022-23,Wheat,1003000.0
+Haryana,Kurukshetra,2022-23,Wheat,506000.0
+Haryana,Mahendragarh,2022-23,Wheat,133000.0
+Haryana,Nuh,2022-23,Wheat,268000.0
+Haryana,Palwal,2022-23,Wheat,414000.0
+Haryana,Panchkula,2022-23,Wheat,74000.0
+Haryana,Panipat,2022-23,Wheat,375000.0
+Haryana,Rewari,2022-23,Wheat,139000.0
+Haryana,Rohtak,2022-23,Wheat,430000.0
+Haryana,Sirsa,2022-23,Wheat,1204000.0
+Haryana,Sonipat,2022-23,Wheat,630000.0
+Haryana,Yamunanagar,2022-23,Wheat,478000.0
